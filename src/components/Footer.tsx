@@ -43,9 +43,14 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-xs">&copy; {new Date().getFullYear()} UKSteelGutters.co.uk. All rights reserved.</p>
-          <p className="text-xs">Official Bilka steel guttering stockist &bull; Nationwide UK delivery</p>
+        <div className="border-t border-gray-800 mt-12 pt-8 space-y-3">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-xs">&copy; {new Date().getFullYear()} UKSteelGutters.co.uk. All rights reserved.</p>
+            <p className="text-xs">Official Bilka steel guttering stockist &bull; Nationwide UK delivery</p>
+          </div>
+          <p className="text-xs text-gray-600 text-center sm:text-left">
+            UKSteelGutters is a trading name of Aegis Roofing Products Ltd &bull; Registered in England &amp; Wales &bull; Company No. 15171019
+          </p>
         </div>
       </div>
     </footer>
