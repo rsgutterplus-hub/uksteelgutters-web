@@ -1,6 +1,7 @@
-import { Metadata } from "next";
+"use client";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { useState, use } from "react";
 import ColorSwatches from "@/components/ColorSwatches";
 import { getProductBySlug, getProductsBySystem } from "@/data/products";
 
@@ -8,24 +9,12 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-export async function generateStaticParams() {
-  return getProductsBySystem("125/90").map((p) => ({ slug: p.slug }));
-}
-
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params;
-  const product = getProductBySlug(slug, "125/90");
-  if (!product) return {};
-  return {
-    title: `${product.name} — 125/90 System — UKSteelGutters`,
-    description: product.description,
-  };
-}
-
-export default async function ProductDetailPage({ params }: PageProps) {
-  const { slug } = await params;
+export default function ProductDetailPage({ params }: PageProps) {
+  const { slug } = use(params);
   const product = getProductBySlug(slug, "125/90");
   if (!product) notFound();
+
+  const [activeView, setActiveView] = useState<"photo" | "drawing">("photo");
 
   return (
     <>
@@ -44,19 +33,58 @@ export default async function ProductDetailPage({ params }: PageProps) {
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Image */}
-            <div className="bg-cream rounded-xl p-8 flex items-center justify-center">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="max-w-full max-h-96 object-contain"
-              />
+
+            {/* Image Panel */}
+            <div>
+              {/* Toggle tabs */}
+              {product.drawing && (
+                <div className="flex gap-2 mb-4">
+                  <button
+                    onClick={() => setActiveView("photo")}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                      activeView === "photo"
+                        ? "bg-navy text-white"
+                        : "bg-gray-100 text-navy hover:bg-gray-200"
+                    }`}
+                  >
+                    Product Photo
+                  </button>
+                  <button
+                    onClick={() => setActiveView("drawing")}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                      activeView === "drawing"
+                        ? "bg-navy text-white"
+                        : "bg-gray-100 text-navy hover:bg-gray-200"
+                    }`}
+                  >
+                    Technical Drawing
+                  </button>
+                </div>
+              )}
+
+              {/* Image or Drawing */}
+              <div className="bg-cream rounded-xl overflow-hidden flex items-center justify-center" style={{ minHeight: "380px" }}>
+                {activeView === "photo" || !product.drawing ? (
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="max-w-full max-h-96 object-contain p-8"
+                  />
+                ) : (
+                  <iframe
+                    src={product.drawing}
+                    className="w-full rounded-xl"
+                    style={{ height: "420px" }}
+                    title={`${product.name} technical drawing`}
+                  />
+                )}
+              </div>
             </div>
 
             {/* Details */}
             <div>
               <span className="text-sm text-gold font-semibold uppercase tracking-wider">
-                125/90 System — {product.category}
+                125/90 System \u2014 {product.category}
               </span>
               <h1 className="text-3xl font-bold text-navy mt-2">{product.name}</h1>
               {product.price && (
@@ -64,7 +92,6 @@ export default async function ProductDetailPage({ params }: PageProps) {
               )}
               <p className="mt-6 text-gray-600 leading-relaxed">{product.description}</p>
 
-              {/* Features */}
               <div className="mt-8">
                 <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-3">
                   Features
@@ -79,14 +106,12 @@ export default async function ProductDetailPage({ params }: PageProps) {
                 </ul>
               </div>
 
-              {/* Colours */}
               <div className="mt-8 space-y-4">
                 <ColorSwatches range="Glossy" />
                 <ColorSwatches range="Matt" />
                 <ColorSwatches range="Magnelis" />
               </div>
 
-              {/* CTA */}
               <div className="mt-10 flex gap-4">
                 <Link
                   href="/contact"
