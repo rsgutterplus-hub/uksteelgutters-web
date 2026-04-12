@@ -22,7 +22,7 @@ function getRalCode(name: string): string {
 
 export default function ProductDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = use(params);
-  const product = getProductBySlug(slug, "150/100");
+  const product = getProductBySlug(slug, "150/100")!;
   if (!product) notFound();
 
   const { addItem: addToCart } = useCart();

@@ -22,7 +22,7 @@ function getRalCode(name: string): string {
 
 export default function ProductDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = use(params);
-  const product = getProductBySlug(slug, "125/90");
+  const product = getProductBySlug(slug, "125/90")!;
   if (!product) notFound();
 
   const { addItem: addToCart } = useCart();
@@ -170,7 +170,6 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                 </div>
               </div>
 
-              {/* Action buttons */}
               <div className="mt-6 space-y-3">
                 <div className="flex items-center gap-3">
                   <button onClick={handleAddToCart}
