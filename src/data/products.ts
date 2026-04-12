@@ -40,12 +40,6 @@ export const colorOptions: Record<string, { name: string; hex: string }[]> = {
   ],
 };
 
-// Shared products (same for both 125 and 150 systems)
-const sharedProducts = {
-  gutter125: { image: "/images/products/gutter-7016-glossy.jpg" },
-  gutter150: { image: "/images/products/gutter-7016-glossy.jpg" },
-};
-
 const halfRound125Products: Product[] = [
   {
     id: "hr125-gutter",
@@ -55,8 +49,8 @@ const halfRound125Products: Product[] = [
     range: "Glossy",
     description: "Bilka 125mm half round steel gutter. Premium quality steel guttering suitable for most residential properties. Available in Glossy, Matt and Magnelis finishes.",
     features: ["125mm width", "0.6mm Bilka steel", "Half round profile", "Available in 2m & 4m lengths", "All RAL colours available"],
-    image: "/images/products/gutter-7016-glossy.jpg",
-    price: "From \u00a312.50/m",
+    image: "/images/products/gutter-7011-glossy.jpg",
+    price: "From £12.50/m",
     category: "Gutters",
   },
   {
@@ -68,7 +62,7 @@ const halfRound125Products: Product[] = [
     description: "Bilka 90mm round downpipe for the 125mm half round gutter system. Precision-formed steel for reliable rainwater drainage.",
     features: ["90mm diameter", "0.6mm Bilka steel", "Round profile", "Available in 2m & 3m lengths", "Colour matched to gutters"],
     image: "/images/products/downpipe-7016-glossy.jpg",
-    price: "From \u00a310.80/m",
+    price: "From £10.80/m",
     category: "Downpipes",
   },
   {
@@ -80,7 +74,7 @@ const halfRound125Products: Product[] = [
     description: "Adjustable steel fascia hook for securing the 125mm half round gutter. Precise gradient setting.",
     features: ["For 125mm gutters", "Heavy-duty steel", "Adjustable height", "Colour matched"],
     image: "/images/products/hook-adjustable-7016-glossy.jpg",
-    price: "From \u00a33.20",
+    price: "From £3.20",
     category: "Hooks & Brackets",
   },
   {
@@ -92,7 +86,7 @@ const halfRound125Products: Product[] = [
     description: "160mm steel fascia hook for securing the 125mm half round gutter to standard fascia boards.",
     features: ["For 125mm gutters", "160mm arm length", "Heavy-duty steel", "Colour matched"],
     image: "/images/products/hook-160-7016-glossy.jpg",
-    price: "From \u00a33.50",
+    price: "From £3.50",
     category: "Hooks & Brackets",
   },
   {
@@ -104,19 +98,7 @@ const halfRound125Products: Product[] = [
     description: "210mm steel fascia hook for securing the 125mm half round gutter to deeper fascia boards.",
     features: ["For 125mm gutters", "210mm arm length", "Heavy-duty steel", "Colour matched"],
     image: "/images/products/hook-210-7016-glossy.jpg",
-    price: "From \u00a33.80",
-    category: "Hooks & Brackets",
-  },
-  {
-    id: "hr125-hook-combi",
-    name: "Combi Hook 125mm",
-    slug: "hook-combi-125",
-    system: "125/90",
-    range: "Glossy",
-    description: "Combination hook for the 125mm half round gutter. Suitable for both rafter and fascia mounting.",
-    features: ["For 125mm gutters", "Rafter or fascia mount", "Heavy-duty steel", "Colour matched"],
-    image: "/images/products/hook-combi-7016-glossy.jpg",
-    price: "From \u00a34.20",
+    price: "From £3.80",
     category: "Hooks & Brackets",
   },
   {
@@ -128,7 +110,7 @@ const halfRound125Products: Product[] = [
     description: "Twisted steel hook for the 125mm half round gutter. Used where standard hooks cannot be fitted.",
     features: ["For 125mm gutters", "Twisted design", "Heavy-duty steel", "Colour matched"],
     image: "/images/products/hook-twisted-7016-glossy.jpg",
-    price: "From \u00a34.20",
+    price: "From £4.20",
     category: "Hooks & Brackets",
   },
   {
@@ -140,7 +122,7 @@ const halfRound125Products: Product[] = [
     description: "Running outlet connecting the 125mm gutter to the 90mm downpipe. Factory-formed for a watertight seal.",
     features: ["125mm gutter to 90mm downpipe", "Factory-formed seal", "Steel construction", "Colour matched"],
     image: "/images/products/running-outlet-7016-glossy.jpg",
-    price: "From \u00a38.50",
+    price: "From £8.50",
     category: "Outlets & Connectors",
   },
   {
@@ -152,7 +134,7 @@ const halfRound125Products: Product[] = [
     description: "Funnel outlet for the 125mm gutter connecting to the 90mm downpipe. End-of-run outlet option.",
     features: ["125mm gutter to 90mm downpipe", "End-of-run outlet", "Steel construction", "Colour matched"],
     image: "/images/products/funnel-7016-glossy.jpg",
-    price: "From \u00a39.50",
+    price: "From £9.50",
     category: "Outlets & Connectors",
   },
   {
@@ -164,7 +146,7 @@ const halfRound125Products: Product[] = [
     description: "Stop end for the 125mm half round gutter system. Provides a neat, sealed end to gutter runs.",
     features: ["For 125mm gutters", "Sealed finish", "Steel construction", "Colour matched"],
     image: "/images/products/stop-end-7016-glossy.jpg",
-    price: "From \u00a33.80",
+    price: "From £3.80",
     category: "Stop Ends",
   },
   {
@@ -176,7 +158,7 @@ const halfRound125Products: Product[] = [
     description: "Joining element for connecting two lengths of 125mm half round gutter. Watertight connection.",
     features: ["For 125mm gutters", "Joins gutter lengths", "Watertight seal", "Colour matched"],
     image: "/images/products/joining-element-7016-glossy.jpg",
-    price: "From \u00a35.90",
+    price: "From £5.90",
     category: "Joints & Connectors",
   },
   {
@@ -188,7 +170,7 @@ const halfRound125Products: Product[] = [
     description: "Extension piece for the 125mm half round gutter. Used to extend gutter runs where needed.",
     features: ["For 125mm gutters", "Extends gutter runs", "Steel construction", "Colour matched"],
     image: "/images/products/extension-7016-glossy.jpg",
-    price: "From \u00a34.50",
+    price: "From £4.50",
     category: "Joints & Connectors",
   },
   {
@@ -200,7 +182,7 @@ const halfRound125Products: Product[] = [
     description: "Gutter flange for the 125mm half round system. Provides a secure fixing point to the fascia board.",
     features: ["For 125mm gutters", "Fascia fixing", "Steel construction", "Colour matched"],
     image: "/images/products/gutter-flange-7016-glossy.jpg",
-    price: "From \u00a34.20",
+    price: "From £4.20",
     category: "Joints & Connectors",
   },
   {
@@ -212,7 +194,7 @@ const halfRound125Products: Product[] = [
     description: "External corner piece for the 125mm half round gutter system. Allows gutter runs to turn external corners.",
     features: ["For 125mm gutters", "External corners", "Steel construction", "Colour matched"],
     image: "/images/products/external-corner-7016-glossy.jpg",
-    price: "From \u00a314.50",
+    price: "From £14.50",
     category: "Angles & Corners",
   },
   {
@@ -224,7 +206,7 @@ const halfRound125Products: Product[] = [
     description: "Internal corner piece for the 125mm half round gutter system. Allows gutter runs to turn internal corners.",
     features: ["For 125mm gutters", "Internal corners", "Steel construction", "Colour matched"],
     image: "/images/products/internal-corner-7016-glossy.jpg",
-    price: "From \u00a314.50",
+    price: "From £14.50",
     category: "Angles & Corners",
   },
   {
@@ -236,7 +218,7 @@ const halfRound125Products: Product[] = [
     description: "Wall-mounted bracket for securing the 90mm downpipe. Adjustable standoff for different wall types.",
     features: ["For 90mm downpipes", "Wall-mounted", "Adjustable standoff", "Colour matched"],
     image: "/images/products/downpipe-bracket-7016-glossy.jpg",
-    price: "From \u00a32.80",
+    price: "From £2.80",
     category: "Hooks & Brackets",
   },
   {
@@ -248,7 +230,7 @@ const halfRound125Products: Product[] = [
     description: "Downpipe clamp for securing the 90mm downpipe to the wall. Provides additional fixing support.",
     features: ["For 90mm downpipes", "Wall fixing", "Steel construction", "Colour matched"],
     image: "/images/products/downpipe-clamp-7016-glossy.jpg",
-    price: "From \u00a33.20",
+    price: "From £3.20",
     category: "Hooks & Brackets",
   },
   {
@@ -260,7 +242,7 @@ const halfRound125Products: Product[] = [
     description: "Discharge elbow for the 90mm downpipe. Directs water away from the wall at the base.",
     features: ["For 90mm downpipes", "Directs water away from wall", "Steel construction", "Colour matched"],
     image: "/images/products/discharge-elbow-7016-glossy.jpg",
-    price: "From \u00a36.50",
+    price: "From £6.50",
     category: "Downpipes",
   },
   {
@@ -269,10 +251,10 @@ const halfRound125Products: Product[] = [
     slug: "elbow-60-90",
     system: "125/90",
     range: "Glossy",
-    description: "60\u00b0 offset elbow for the 90mm downpipe system. Navigates from the gutter outlet to the wall face.",
-    features: ["For 90mm downpipes", "60\u00b0 angle", "Steel construction", "Colour matched"],
-    image: "/images/products/elbow-60-7016-glossy.jpg",
-    price: "From \u00a35.90",
+    description: "60° offset elbow for the 90mm downpipe system. Navigates from the gutter outlet to the wall face.",
+    features: ["For 90mm downpipes", "60° angle", "Steel construction", "Colour matched"],
+    image: "/images/products/elbow-60-7011-glossy.jpg",
+    price: "From £5.90",
     category: "Downpipes",
   },
 ];
@@ -286,8 +268,8 @@ const halfRound150Products: Product[] = [
     range: "Glossy",
     description: "Bilka 150mm half round steel gutter. Large capacity guttering ideal for larger properties and higher rainfall areas.",
     features: ["150mm width", "0.6mm Bilka steel", "Half round profile", "Available in 2m & 4m lengths", "High capacity"],
-    image: "/images/products/gutter-7016-glossy.jpg",
-    price: "From \u00a315.80/m",
+    image: "/images/products/gutter-7011-glossy.jpg",
+    price: "From £15.80/m",
     category: "Gutters",
   },
   {
@@ -299,7 +281,7 @@ const halfRound150Products: Product[] = [
     description: "Bilka 100mm round downpipe for the 150mm half round gutter system. Larger bore for increased water flow.",
     features: ["100mm diameter", "0.6mm Bilka steel", "Round profile", "Available in 2m & 3m lengths", "High flow capacity"],
     image: "/images/products/downpipe-7016-glossy.jpg",
-    price: "From \u00a313.20/m",
+    price: "From £13.20/m",
     category: "Downpipes",
   },
   {
@@ -311,7 +293,7 @@ const halfRound150Products: Product[] = [
     description: "Heavy-duty adjustable steel fascia hook for securing the 150mm half round gutter.",
     features: ["For 150mm gutters", "Heavy-duty steel", "Adjustable height", "Colour matched"],
     image: "/images/products/hook-adjustable-7016-glossy.jpg",
-    price: "From \u00a33.80",
+    price: "From £3.80",
     category: "Hooks & Brackets",
   },
   {
@@ -323,7 +305,7 @@ const halfRound150Products: Product[] = [
     description: "160mm steel fascia hook for securing the 150mm half round gutter to standard fascia boards.",
     features: ["For 150mm gutters", "160mm arm length", "Heavy-duty steel", "Colour matched"],
     image: "/images/products/hook-160-7016-glossy.jpg",
-    price: "From \u00a34.20",
+    price: "From £4.20",
     category: "Hooks & Brackets",
   },
   {
@@ -335,19 +317,7 @@ const halfRound150Products: Product[] = [
     description: "210mm steel fascia hook for securing the 150mm half round gutter to deeper fascia boards.",
     features: ["For 150mm gutters", "210mm arm length", "Heavy-duty steel", "Colour matched"],
     image: "/images/products/hook-210-7016-glossy.jpg",
-    price: "From \u00a34.50",
-    category: "Hooks & Brackets",
-  },
-  {
-    id: "hr150-hook-combi",
-    name: "Combi Hook 150mm",
-    slug: "hook-combi-150",
-    system: "150/100",
-    range: "Glossy",
-    description: "Combination hook for the 150mm half round gutter. Suitable for both rafter and fascia mounting.",
-    features: ["For 150mm gutters", "Rafter or fascia mount", "Heavy-duty steel", "Colour matched"],
-    image: "/images/products/hook-combi-7016-glossy.jpg",
-    price: "From \u00a34.80",
+    price: "From £4.50",
     category: "Hooks & Brackets",
   },
   {
@@ -359,7 +329,7 @@ const halfRound150Products: Product[] = [
     description: "Twisted steel hook for the 150mm half round gutter. Used where standard hooks cannot be fitted.",
     features: ["For 150mm gutters", "Twisted design", "Heavy-duty steel", "Colour matched"],
     image: "/images/products/hook-twisted-7016-glossy.jpg",
-    price: "From \u00a34.80",
+    price: "From £4.80",
     category: "Hooks & Brackets",
   },
   {
@@ -371,7 +341,7 @@ const halfRound150Products: Product[] = [
     description: "Running outlet connecting the 150mm gutter to the 100mm downpipe. Factory-formed for a watertight seal.",
     features: ["150mm gutter to 100mm downpipe", "Factory-formed seal", "Steel construction", "Colour matched"],
     image: "/images/products/running-outlet-7016-glossy.jpg",
-    price: "From \u00a310.50",
+    price: "From £10.50",
     category: "Outlets & Connectors",
   },
   {
@@ -383,7 +353,7 @@ const halfRound150Products: Product[] = [
     description: "Funnel outlet for the 150mm gutter connecting to the 100mm downpipe. End-of-run outlet option.",
     features: ["150mm gutter to 100mm downpipe", "End-of-run outlet", "Steel construction", "Colour matched"],
     image: "/images/products/funnel-7016-glossy.jpg",
-    price: "From \u00a311.50",
+    price: "From £11.50",
     category: "Outlets & Connectors",
   },
   {
@@ -395,7 +365,7 @@ const halfRound150Products: Product[] = [
     description: "Stop end for the 150mm half round gutter system. Provides a neat, sealed end to gutter runs.",
     features: ["For 150mm gutters", "Sealed finish", "Steel construction", "Colour matched"],
     image: "/images/products/stop-end-7016-glossy.jpg",
-    price: "From \u00a34.50",
+    price: "From £4.50",
     category: "Stop Ends",
   },
   {
@@ -407,7 +377,7 @@ const halfRound150Products: Product[] = [
     description: "Joining element for connecting two lengths of 150mm half round gutter. Watertight connection.",
     features: ["For 150mm gutters", "Joins gutter lengths", "Watertight seal", "Colour matched"],
     image: "/images/products/joining-element-7016-glossy.jpg",
-    price: "From \u00a37.20",
+    price: "From £7.20",
     category: "Joints & Connectors",
   },
   {
@@ -419,7 +389,7 @@ const halfRound150Products: Product[] = [
     description: "Extension piece for the 150mm half round gutter. Used to extend gutter runs where needed.",
     features: ["For 150mm gutters", "Extends gutter runs", "Steel construction", "Colour matched"],
     image: "/images/products/extension-7016-glossy.jpg",
-    price: "From \u00a35.50",
+    price: "From £5.50",
     category: "Joints & Connectors",
   },
   {
@@ -431,7 +401,7 @@ const halfRound150Products: Product[] = [
     description: "Gutter flange for the 150mm half round system. Provides a secure fixing point to the fascia board.",
     features: ["For 150mm gutters", "Fascia fixing", "Steel construction", "Colour matched"],
     image: "/images/products/gutter-flange-7016-glossy.jpg",
-    price: "From \u00a35.20",
+    price: "From £5.20",
     category: "Joints & Connectors",
   },
   {
@@ -443,7 +413,7 @@ const halfRound150Products: Product[] = [
     description: "External corner piece for the 150mm half round gutter system. Allows gutter runs to turn external corners.",
     features: ["For 150mm gutters", "External corners", "Steel construction", "Colour matched"],
     image: "/images/products/external-corner-7016-glossy.jpg",
-    price: "From \u00a317.50",
+    price: "From £17.50",
     category: "Angles & Corners",
   },
   {
@@ -455,7 +425,7 @@ const halfRound150Products: Product[] = [
     description: "Internal corner piece for the 150mm half round gutter system. Allows gutter runs to turn internal corners.",
     features: ["For 150mm gutters", "Internal corners", "Steel construction", "Colour matched"],
     image: "/images/products/internal-corner-7016-glossy.jpg",
-    price: "From \u00a317.50",
+    price: "From £17.50",
     category: "Angles & Corners",
   },
   {
@@ -467,7 +437,7 @@ const halfRound150Products: Product[] = [
     description: "Wall-mounted bracket for securing the 100mm downpipe. Adjustable standoff for different wall types.",
     features: ["For 100mm downpipes", "Wall-mounted", "Adjustable standoff", "Colour matched"],
     image: "/images/products/downpipe-bracket-7016-glossy.jpg",
-    price: "From \u00a33.20",
+    price: "From £3.20",
     category: "Hooks & Brackets",
   },
   {
@@ -479,7 +449,7 @@ const halfRound150Products: Product[] = [
     description: "Downpipe clamp for securing the 100mm downpipe to the wall. Provides additional fixing support.",
     features: ["For 100mm downpipes", "Wall fixing", "Steel construction", "Colour matched"],
     image: "/images/products/downpipe-clamp-7016-glossy.jpg",
-    price: "From \u00a33.80",
+    price: "From £3.80",
     category: "Hooks & Brackets",
   },
   {
@@ -491,7 +461,7 @@ const halfRound150Products: Product[] = [
     description: "Discharge elbow for the 100mm downpipe. Directs water away from the wall at the base.",
     features: ["For 100mm downpipes", "Directs water away from wall", "Steel construction", "Colour matched"],
     image: "/images/products/discharge-elbow-7016-glossy.jpg",
-    price: "From \u00a37.80",
+    price: "From £7.80",
     category: "Downpipes",
   },
   {
@@ -500,10 +470,10 @@ const halfRound150Products: Product[] = [
     slug: "elbow-60-100",
     system: "150/100",
     range: "Glossy",
-    description: "60\u00b0 offset elbow for the 100mm downpipe system. Navigates from the gutter outlet to the wall face.",
-    features: ["For 100mm downpipes", "60\u00b0 angle", "Steel construction", "Colour matched"],
-    image: "/images/products/elbow-60-7016-glossy.jpg",
-    price: "From \u00a37.20",
+    description: "60° offset elbow for the 100mm downpipe system. Navigates from the gutter outlet to the wall face.",
+    features: ["For 100mm downpipes", "60° angle", "Steel construction", "Colour matched"],
+    image: "/images/products/elbow-60-7011-glossy.jpg",
+    price: "From £7.20",
     category: "Downpipes",
   },
 ];
