@@ -7,6 +7,75 @@ export const metadata: Metadata = {
     "Buy Bilka half round steel guttering online. Made from SSAB Swedish steel with Z275 hot-dip galvanisation. 125/90 and 150/100 systems in 12 RAL colours. 30-year guarantee. Free UK delivery over £600.",
 };
 
+function CoatingDiagram() {
+  const layers = [
+    { label: "Prelaq Nova colour coat", spec: "35 µm", color: "#C6A037", textColor: "#1B2A3B", h: 28 },
+    { label: "Primer", spec: "", color: "#8B7355", textColor: "#fff", h: 14 },
+    { label: "Zinc galvanisation (Z275)", spec: "275 g/m²", color: "#9EAAB4", textColor: "#1B2A3B", h: 30 },
+    { label: "SSAB Swedish steel", spec: "0.6 mm", color: "#1B2A3B", textColor: "#C6A037", h: 72 },
+    { label: "Zinc galvanisation (Z275)", spec: "275 g/m²", color: "#9EAAB4", textColor: "#1B2A3B", h: 30 },
+    { label: "Primer", spec: "", color: "#8B7355", textColor: "#fff", h: 14 },
+    { label: "Reverse coat", spec: "", color: "#6B8C9E", textColor: "#fff", h: 18 },
+  ];
+
+  let y = 0;
+  const totalH = layers.reduce((s, l) => s + l.h, 0);
+
+  return (
+    <svg viewBox={`0 0 520 ${totalH + 16}`} xmlns="http://www.w3.org/2000/svg" className="w-full max-w-lg mx-auto">
+      {layers.map((layer, i) => {
+        const rect = (
+          <g key={i}>
+            <rect x="0" y={y + 8} width="520" height={layer.h} fill={layer.color} />
+            <text
+              x="16"
+              y={y + 8 + layer.h / 2}
+              dominantBaseline="middle"
+              fill={layer.textColor}
+              fontSize={layer.h >= 28 ? "11" : "9"}
+              fontFamily="system-ui, sans-serif"
+              fontWeight={layer.label.includes("SSAB") ? "700" : "500"}
+            >
+              {layer.label}
+            </text>
+            {layer.spec && (
+              <text
+                x="504"
+                y={y + 8 + layer.h / 2}
+                dominantBaseline="middle"
+                textAnchor="end"
+                fill={layer.textColor}
+                fontSize="10"
+                fontFamily="system-ui, sans-serif"
+                fontWeight="600"
+              >
+                {layer.spec}
+              </text>
+            )}
+          </g>
+        );
+        y += layer.h;
+        return rect;
+      })}
+    </svg>
+  );
+}
+
+const specRows = [
+  ["Use", "Exterior", "Exterior", "—"],
+  ["Surface coating thickness", "35 µm / 35 µm", "40 µm / 40 µm", "ISO 2808"],
+  ["Thickness tolerance", "± 6 µm", "± 6 µm", "EN 10169-1"],
+  ["Gloss level (GU)", "40", "< 5", "EN 13523-2"],
+  ["Min. internal bend radius", "0.5 × t", "0.5 × t", "EN 13523-7"],
+  ["Min. formation temperature", "−15 °C", "−15 °C", "—"],
+  ["Scratch resistance", "35 N", "30 N", "EN 13523-5"],
+  ["Stain resistance", "Very good", "Very good", "—"],
+  ["Max. working temperature", "+100 °C", "+100 °C", "—"],
+  ["UV category", "RUV3", "RUV4", "prEN 10169-2"],
+  ["Corrosion resistance", "RC5", "RC5", "prEN 10169-2"],
+  ["Zinc coating (both sides)", "275 g/m²", "275 g/m²", "—"],
+];
+
 export default function HomePage() {
   return (
     <>
@@ -55,7 +124,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* The Steel — SSAB */}
+      {/* The Steel — SSAB + coating diagram */}
       <section className="py-20 bg-navy text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -65,25 +134,66 @@ export default function HomePage() {
               <p className="text-gray-300 leading-relaxed mb-6">
                 Every Bilka gutter system starts with 0.6mm steel from SSAB — one of the world&apos;s leading steel manufacturers, headquartered in Sweden. SSAB steel is renowned for its consistency, strength and suitability for demanding coating processes.
               </p>
-              <p className="text-gray-300 leading-relaxed">
-                The steel receives a Z275 hot-dip galvanisation — 275 grams of zinc per square metre applied to both sides — before the polymer colour coating is applied on top. This dual-layer protection is what gives Bilka guttering its exceptional longevity.
+              <p className="text-gray-300 leading-relaxed mb-6">
+                The steel receives a Z275 hot-dip galvanisation — 275 grams of zinc per square metre applied to both sides — before the Prelaq Nova polymer colour coating is applied on top. Five protective layers in total give Bilka guttering its exceptional longevity and corrosion resistance.
               </p>
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { label: "Steel thickness", value: "0.6 mm" },
+                  { label: "Zinc both sides", value: "Z275" },
+                  { label: "Colour coat", value: "Prelaq Nova" },
+                  { label: "Corrosion class", value: "RC5" },
+                ].map(s => (
+                  <div key={s.label} className="bg-white/5 rounded-lg px-4 py-3 border border-white/10">
+                    <p className="text-xs text-gray-400">{s.label}</p>
+                    <p className="text-base font-bold text-gold mt-0.5">{s.value}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {[
-                { label: "Steel thickness", value: "0.6mm", detail: "SSAB Swedish steel" },
-                { label: "Zinc galvanisation", value: "Z275", detail: "275 g/m² both sides" },
-                { label: "Colour coating", value: "Prelaq Nova", detail: "2 × 35 micron polymer" },
-                { label: "Magnelis option", value: "ZM310", detail: "Zn + Al + Mg alloy" },
-              ].map(s => (
-                <div key={s.label} className="bg-white/5 rounded-xl p-5 border border-white/10">
-                  <p className="text-xs text-gray-400 mb-1">{s.label}</p>
-                  <p className="text-xl font-bold text-gold">{s.value}</p>
-                  <p className="text-xs text-gray-400 mt-1">{s.detail}</p>
-                </div>
-              ))}
+            {/* Coating layer diagram */}
+            <div>
+              <p className="text-gold text-xs font-semibold uppercase tracking-widest mb-4 text-center">Five-layer coating cross-section</p>
+              <div className="rounded-xl overflow-hidden border border-white/10">
+                <CoatingDiagram />
+              </div>
+              <p className="text-xs text-gray-500 text-center mt-3">Not to scale. Coating layers exaggerated for clarity.</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Technical spec table */}
+      <section className="py-16 bg-cream">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="text-gold text-sm font-semibold uppercase tracking-widest mb-2">Coating Specification</p>
+            <h2 className="text-2xl font-bold text-navy">Technical Characteristics</h2>
+            <p className="mt-2 text-gray-500 text-sm">Bilka Prelaq Nova polyester coating — Glossy and Matt finishes</p>
+          </div>
+          <div className="bg-white rounded-xl border border-gray-100 overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead className="bg-navy text-white">
+                <tr>
+                  <th className="text-left px-5 py-3 font-semibold">Parameter</th>
+                  <th className="text-left px-5 py-3 font-semibold">Glossy</th>
+                  <th className="text-left px-5 py-3 font-semibold">Matt</th>
+                  <th className="text-left px-5 py-3 font-semibold text-gray-400">Standard</th>
+                </tr>
+              </thead>
+              <tbody>
+                {specRows.map(([param, glossy, matt, std], i) => (
+                  <tr key={param} className={`border-t border-gray-100 ${i % 2 === 0 ? "" : "bg-cream"}`}>
+                    <td className="px-5 py-3 text-gray-700 font-medium">{param}</td>
+                    <td className="px-5 py-3 text-navy font-semibold">{glossy}</td>
+                    <td className="px-5 py-3 text-navy font-semibold">{matt}</td>
+                    <td className="px-5 py-3 text-gray-400 text-xs">{std}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-gray-400 mt-3 text-center">Source: Bilka technical data. Zinc coating Z275 = 275 g/m² applied to both sides of the steel strip.</p>
         </div>
       </section>
 
@@ -128,7 +238,7 @@ export default function HomePage() {
                   <span className="text-gray-400">Standard zinc</span>
                 </div>
               </div>
-              <Link href="/faq#magnelis" className="block bg-navy/5 rounded-xl p-4 text-sm text-navy font-medium hover:bg-navy/10 transition-colors">
+              <Link href="/faq" className="block bg-navy/5 rounded-xl p-4 text-sm text-navy font-medium hover:bg-navy/10 transition-colors">
                 Read more in our FAQ →
               </Link>
             </div>
