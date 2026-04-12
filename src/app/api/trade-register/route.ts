@@ -5,7 +5,7 @@ export async function POST(req: NextRequest) {
   // Sign up free at resend.com — no npm install needed
 
   const apiKey = process.env.RESEND_API_KEY;
-  const toEmail = process.env.QUOTE_EMAIL || "info@gutterplus.co.uk";
+  const toEmail = process.env.QUOTE_EMAIL || "quote@uksteelgutters.co.uk";
 
   const body = await req.json();
   const { name, company, tradeType, email, phone, address, vatNumber, newsletter, message } = body;

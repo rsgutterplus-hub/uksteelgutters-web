@@ -5,7 +5,7 @@ export async function POST(req: NextRequest) {
   // Sign up free at resend.com — no npm install needed
 
   const apiKey = process.env.RESEND_API_KEY;
-  const toEmail = process.env.QUOTE_EMAIL || "info@gutterplus.co.uk";
+  const toEmail = process.env.QUOTE_EMAIL || "quote@uksteelgutters.co.uk";
 
   const body = await req.json();
   const { name, company, email, phone, message, items } = body;
@@ -42,7 +42,6 @@ export async function POST(req: NextRequest) {
   `;
 
   if (!apiKey) {
-    // No Resend key — log and return ok so form still works during setup
     console.log("Quote request received (no RESEND_API_KEY set):", { name, email, items });
     return NextResponse.json({ ok: true });
   }
