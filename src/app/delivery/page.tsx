@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Delivery Information \u2014 UKSteelGutters",
-  description: "Free delivery on orders over \u00a3600 ex-VAT to UK mainland. Next day delivery on stocked items ordered by noon.",
+  title: "Delivery & Returns — UKSteelGutters",
+  description: "Free delivery on orders over £600 ex-VAT to UK mainland. Next day delivery on stocked items ordered by noon. Returns policy for Bilka steel guttering.",
 };
 
 export default function DeliveryPage() {
@@ -10,20 +10,20 @@ export default function DeliveryPage() {
     <>
       <section className="bg-navy text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold">Delivery <span className="text-gold">Information</span></h1>
-          <p className="mt-2 text-gray-400">Fast, reliable delivery of Bilka steel guttering across the UK.</p>
+          <h1 className="text-3xl font-bold">Delivery <span className="text-gold">&amp; Returns</span></h1>
+          <p className="mt-2 text-gray-400">Everything you need to know about getting your order and returning it if needed.</p>
         </div>
       </section>
 
-      {/* Key delivery highlights */}
+      {/* Highlights */}
       <section className="bg-cream py-10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { icon: "\ud83d\ude9a", title: "Next Day Delivery", desc: "Order by noon, delivered next working day" },
-              { icon: "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", title: "UK Mainland", desc: "Scotland 2 working days" },
-              { icon: "\u2705", title: "Free Over \u00a3600", desc: "Free delivery on orders over \u00a3600 ex-VAT" },
-              { icon: "\ud83d\udce6", title: "Pallet Delivery", desc: "Tail lift & pump truck offload" },
+              { icon: "✅", title: "Free Over £600", desc: "UK mainland orders ex-VAT" },
+              { icon: "⚡", title: "Next Day", desc: "Order by noon Mon–Fri" },
+              { icon: "📦", title: "Pallet Delivery", desc: "Tail lift & pump truck" },
+              { icon: "🔄", title: "14-Day Returns", desc: "On stocked items" },
             ].map(b => (
               <div key={b.title} className="bg-white rounded-xl p-5 shadow-sm">
                 <div className="text-3xl mb-2">{b.icon}</div>
@@ -38,7 +38,7 @@ export default function DeliveryPage() {
       <section className="py-12">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
 
-          {/* Charges */}
+          {/* Delivery Charges */}
           <div>
             <h2 className="text-xl font-bold text-navy mb-4">Delivery Charges</h2>
             <div className="bg-white rounded-xl border border-gray-100 overflow-hidden">
@@ -51,30 +51,30 @@ export default function DeliveryPage() {
                 </thead>
                 <tbody>
                   <tr className="border-t border-gray-100">
-                    <td className="px-5 py-4 text-gray-700">Under \u00a3600</td>
+                    <td className="px-5 py-4 text-gray-700">Under £600</td>
                     <td className="px-5 py-4 text-gray-700">
                       Standard carriage charge applies
                       <span className="block text-xs text-gray-400 mt-0.5">Contact us for a delivery quote</span>
                     </td>
                   </tr>
                   <tr className="border-t border-gray-100 bg-green-50">
-                    <td className="px-5 py-4 font-semibold text-navy">\u00a3600 and over</td>
-                    <td className="px-5 py-4 font-bold text-green-700">\u2713 Free Delivery</td>
+                    <td className="px-5 py-4 font-semibold text-navy">£600 and over</td>
+                    <td className="px-5 py-4 font-bold text-green-700">✓ Free Delivery</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            <p className="text-xs text-gray-400 mt-3">* All order values shown exclude VAT. Scotland and remote areas may be subject to surcharge — please contact us before ordering.</p>
+            <p className="text-xs text-gray-400 mt-3">All order values shown exclude VAT. Scotland and remote areas may be subject to surcharge — please contact us before ordering.</p>
           </div>
 
-          {/* Dates & Times */}
+          {/* Delivery Times */}
           <div>
             <h2 className="text-xl font-bold text-navy mb-3">Delivery Dates &amp; Times</h2>
             <div className="bg-cream rounded-xl p-6 space-y-3 text-sm text-gray-700">
               <p><strong className="text-navy">Next day delivery</strong> is available on all stocked items ordered by noon, Monday to Friday (excluding bank holidays).</p>
               <p><strong className="text-navy">Scotland:</strong> Please allow 2 working days.</p>
-              <p><strong className="text-navy">Delivery window:</strong> 8:00am \u2013 5:30pm Monday to Friday. Timed or Saturday deliveries can be arranged at extra charge \u2014 please contact us when placing your order.</p>
-              <p>If we are unable to meet the next day timeframe for any reason, we will contact you immediately to advise of any extended lead time.</p>
+              <p><strong className="text-navy">Delivery window:</strong> 8:00am – 5:30pm Monday to Friday. Timed or Saturday deliveries can be arranged at extra charge — please contact us when placing your order.</p>
+              <p>If we are unable to meet the next day timeframe we will contact you immediately to advise of any extended lead time.</p>
             </div>
           </div>
 
@@ -89,10 +89,45 @@ export default function DeliveryPage() {
 
           {/* Checking goods */}
           <div>
-            <h2 className="text-xl font-bold text-navy mb-3">Checking Your Goods</h2>
+            <h2 className="text-xl font-bold text-navy mb-3">Checking Your Goods on Arrival</h2>
             <div className="text-sm text-gray-700 space-y-3">
-              <p>Please check all goods carefully while the delivery driver is still present. If any damage has occurred, <strong>accept the goods</strong> (do not return to sender), clearly note the damage on the driver&apos;s paperwork, and contact us as soon as possible.</p>
-              <p>Failure to mark the driver&apos;s paperwork may result in damage claims not being honoured.</p>
+              <p>Please check all goods carefully while the delivery driver is still present. If any damage has occurred, <strong>accept the goods</strong> (do not return to sender), clearly note the damage on the driver&apos;s paperwork, and contact us within 48 hours.</p>
+              <p>Failure to mark the driver&apos;s paperwork may result in damage claims not being honoured. We cannot accept liability for damage reported after installation.</p>
+            </div>
+          </div>
+
+          {/* Returns */}
+          <div>
+            <h2 className="text-xl font-bold text-navy mb-4">Returns Policy</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+
+              <div className="bg-white rounded-xl border border-gray-100 p-5">
+                <h3 className="font-semibold text-navy mb-2">Stocked items — 14-day return window</h3>
+                <p>If you wish to return stocked, unmodified goods, please notify us within <strong>14 days of receipt</strong>. Goods must be returned in their original, undamaged condition and in original packaging.</p>
+                <ul className="mt-3 space-y-1.5 text-gray-600">
+                  <li className="flex gap-2"><span className="text-gray-400 flex-shrink-0">&#8594;</span>Return carriage is at the customer&apos;s cost</li>
+                  <li className="flex gap-2"><span className="text-gray-400 flex-shrink-0">&#8594;</span>A restocking fee may apply</li>
+                  <li className="flex gap-2"><span className="text-gray-400 flex-shrink-0">&#8594;</span>Refund issued within 14 days of receiving the goods back</li>
+                  <li className="flex gap-2"><span className="text-gray-400 flex-shrink-0">&#8594;</span>Original delivery charges are non-refundable unless goods are faulty</li>
+                </ul>
+              </div>
+
+              <div className="bg-red-50 rounded-xl border border-red-100 p-5">
+                <h3 className="font-semibold text-navy mb-2">Non-returnable items</h3>
+                <p className="text-gray-600">The following cannot be returned unless faulty:</p>
+                <ul className="mt-2 space-y-1 text-gray-600">
+                  <li className="flex gap-2"><span className="text-red-400 flex-shrink-0">✗</span>Goods that have been cut, modified or installed</li>
+                  <li className="flex gap-2"><span className="text-red-400 flex-shrink-0">✗</span>Special or non-standard colour orders made to order</li>
+                  <li className="flex gap-2"><span className="text-red-400 flex-shrink-0">✗</span>Items returned without prior authorisation</li>
+                </ul>
+              </div>
+
+              <div className="bg-white rounded-xl border border-gray-100 p-5">
+                <h3 className="font-semibold text-navy mb-2">Faulty or incorrect goods</h3>
+                <p>If you receive goods that are faulty or different from what you ordered, contact us within <strong>48 hours of delivery</strong>. We will arrange collection and replacement or issue a full refund at no cost to you.</p>
+              </div>
+
+              <p className="text-xs text-gray-400">Nothing in this returns policy affects your statutory rights as a consumer under the Consumer Rights Act 2015 or the Consumer Contracts Regulations 2013.</p>
             </div>
           </div>
 
@@ -104,12 +139,9 @@ export default function DeliveryPage() {
 
           {/* CTA */}
           <div className="bg-navy rounded-xl p-8 text-center text-white">
-            <h3 className="text-xl font-bold mb-2">Questions about delivery?</h3>
-            <p className="text-gray-400 text-sm mb-6">We&apos;re happy to discuss delivery options for large or complex orders.</p>
-            <Link href="/contact"
-              className="inline-flex items-center px-8 py-3.5 bg-gold text-navy font-bold rounded-lg hover:bg-gold-light transition-colors">
-              Contact Us
-            </Link>
+            <h3 className="text-xl font-bold mb-2">Questions about delivery or returns?</h3>
+            <p className="text-gray-400 text-sm mb-6">We&apos;re happy to discuss options for large or complex orders.</p>
+            <Link href="/contact" className="inline-flex items-center px-8 py-3.5 bg-gold text-navy font-bold rounded-lg hover:bg-gold-light transition-colors">Contact Us</Link>
           </div>
 
         </div>
