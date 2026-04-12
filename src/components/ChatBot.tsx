@@ -57,7 +57,7 @@ export default function ChatBot() {
       {/* Chat panel */}
       {open && (
         <div
-          className="fixed bottom-20 right-4 sm:right-6 z-50 flex flex-col bg-white rounded-2xl border border-gray-100"
+          className="fixed bottom-24 right-4 sm:right-6 z-50 flex flex-col bg-white rounded-2xl border border-gray-100"
           style={{ width: 340, maxHeight: 540, boxShadow: "0 8px 40px rgba(0,0,0,0.18)" }}
         >
           {/* Header */}
@@ -173,23 +173,39 @@ export default function ChatBot() {
         </div>
       )}
 
-      {/* Floating button */}
-      <button
-        onClick={() => setOpen(o => !o)}
-        className="fixed bottom-4 right-4 sm:right-6 w-14 h-14 bg-navy rounded-full flex items-center justify-center hover:scale-105 transition-transform z-50"
-        style={{ boxShadow: "0 4px 20px rgba(0,0,0,0.25)" }}
-        aria-label="Open chat"
-      >
-        {open ? (
-          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      {/* Floating button — pill with text when closed, small circle with X when open */}
+      {open ? (
+        <button
+          onClick={() => setOpen(false)}
+          className="fixed bottom-4 right-4 sm:right-6 w-12 h-12 bg-navy rounded-full flex items-center justify-center hover:bg-opacity-90 transition-all z-50"
+          style={{ boxShadow: "0 4px 20px rgba(0,0,0,0.25)" }}
+          aria-label="Close chat"
+        >
+          <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
-        ) : (
-          <svg className="w-6 h-6 text-gold" fill="currentColor" viewBox="0 0 24 24">
+        </button>
+      ) : (
+        <button
+          onClick={() => setOpen(true)}
+          className="fixed bottom-4 right-4 sm:right-6 flex items-center gap-3 bg-gold text-navy pl-4 pr-5 py-3 rounded-full font-bold text-sm hover:scale-105 transition-transform z-50"
+          style={{ boxShadow: "0 4px 24px rgba(0,0,0,0.22)", animation: "chatPulse 3s ease-in-out infinite" }}
+          aria-label="Open chat"
+        >
+          <svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
             <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
           </svg>
-        )}
-      </button>
+          <span>Chat with us</span>
+          <span className="w-2 h-2 bg-green-500 rounded-full flex-shrink-0" />
+        </button>
+      )}
+
+      <style>{`
+        @keyframes chatPulse {
+          0%, 100% { box-shadow: 0 4px 24px rgba(0,0,0,0.22); }
+          50% { box-shadow: 0 4px 32px rgba(198,160,55,0.55); }
+        }
+      `}</style>
     </>
   );
 }
