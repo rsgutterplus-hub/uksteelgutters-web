@@ -24,7 +24,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6">
             <Link href="/" className="hover:text-gold transition-colors text-sm font-medium">Home</Link>
             <div className="relative group">
               <button className="hover:text-gold transition-colors text-sm font-medium flex items-center gap-1">
@@ -33,7 +33,7 @@ export default function Header() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="p-4 space-y-1">
                   <p className="text-xs uppercase tracking-wider text-gray-400 font-semibold mb-2">Half Round Systems</p>
                   <Link href="/shop/half-round-125" className="block px-3 py-2 text-navy hover:bg-cream rounded-md text-sm font-medium">125/90 System</Link>
@@ -41,8 +41,9 @@ export default function Header() {
                 </div>
               </div>
             </div>
-            <Link href="/trade-account" className="hover:text-gold transition-colors text-sm font-medium">Trade Account</Link>
-            <Link href="/about" className="hover:text-gold transition-colors text-sm font-medium">About</Link>
+            <Link href="/installation-guide" className="hover:text-gold transition-colors text-sm font-medium">Installation</Link>
+            <Link href="/trade-account" className="hover:text-gold transition-colors text-sm font-medium">Trade</Link>
+            <Link href="/delivery" className="hover:text-gold transition-colors text-sm font-medium">Delivery</Link>
             <Link href="/contact" className="hover:text-gold transition-colors text-sm font-medium">Contact</Link>
 
             {/* Quote icon */}
@@ -102,8 +103,9 @@ export default function Header() {
             <p className="text-xs uppercase tracking-wider text-gray-400 font-semibold pt-2">Shop</p>
             <Link href="/shop/half-round-125" className="block py-2 pl-4 hover:text-gold" onClick={() => setMobileOpen(false)}>Half Round 125/90</Link>
             <Link href="/shop/half-round-150" className="block py-2 pl-4 hover:text-gold" onClick={() => setMobileOpen(false)}>Half Round 150/100</Link>
+            <Link href="/installation-guide" className="block py-2 hover:text-gold" onClick={() => setMobileOpen(false)}>Installation Guide</Link>
             <Link href="/trade-account" className="block py-2 hover:text-gold" onClick={() => setMobileOpen(false)}>Trade Account</Link>
-            <Link href="/about" className="block py-2 hover:text-gold" onClick={() => setMobileOpen(false)}>About</Link>
+            <Link href="/delivery" className="block py-2 hover:text-gold" onClick={() => setMobileOpen(false)}>Delivery &amp; Returns</Link>
             <Link href="/contact" className="block py-2 hover:text-gold" onClick={() => setMobileOpen(false)}>Contact</Link>
             <Link href="/quote" className="block py-2 hover:text-gold" onClick={() => setMobileOpen(false)}>Quote Basket</Link>
           </nav>

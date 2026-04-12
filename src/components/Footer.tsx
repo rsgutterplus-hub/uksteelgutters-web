@@ -8,33 +8,30 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-8 bg-gold rounded-sm flex items-center justify-center font-bold text-navy text-sm">
-                UK
-              </div>
-              <span className="text-white font-bold">
-                UK<span className="text-gold">Steel</span>Gutters
-              </span>
+              <div className="w-8 h-8 bg-gold rounded-sm flex items-center justify-center font-bold text-navy text-sm">UK</div>
+              <span className="text-white font-bold">UK<span className="text-gold">Steel</span>Gutters</span>
             </div>
-            <p className="text-sm leading-relaxed">
-              Official UK stockist of Bilka steel guttering systems. Premium quality steel rainwater
-              goods delivered nationwide.
-            </p>
+            <p className="text-sm leading-relaxed">Official UK stockist of Bilka steel guttering systems. Premium quality steel rainwater goods delivered nationwide.</p>
           </div>
 
           {/* Products */}
           <div>
             <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Products</h3>
             <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/shop/half-round-125" className="hover:text-gold transition-colors">
-                  Half Round 125/90
-                </Link>
-              </li>
-              <li>
-                <Link href="/shop/half-round-150" className="hover:text-gold transition-colors">
-                  Half Round 150/100
-                </Link>
-              </li>
+              <li><Link href="/shop/half-round-125" className="hover:text-gold transition-colors">Half Round 125/90</Link></li>
+              <li><Link href="/shop/half-round-150" className="hover:text-gold transition-colors">Half Round 150/100</Link></li>
+              <li><Link href="/trade-account" className="hover:text-gold transition-colors">Trade Account</Link></li>
+              <li><Link href="/quote" className="hover:text-gold transition-colors">Request a Quote</Link></li>
+            </ul>
+          </div>
+
+          {/* Support */}
+          <div>
+            <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Help &amp; Support</h3>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="/installation-guide" className="hover:text-gold transition-colors">Installation Guide</Link></li>
+              <li><Link href="/delivery" className="hover:text-gold transition-colors">Delivery &amp; Returns</Link></li>
+              <li><Link href="/contact" className="hover:text-gold transition-colors">Contact Us</Link></li>
             </ul>
           </div>
 
@@ -42,37 +39,16 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Finishes</h3>
             <ul className="space-y-2 text-sm">
-              <li>Glossy Range (PE coating)</li>
-              <li>Matt Range (MATT PE coating)</li>
-              <li>Magnelis Range (ZM310)</li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Contact</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/contact" className="hover:text-gold transition-colors">
-                  Get a Quote
-                </Link>
-              </li>
-              <li>
-                <Link href="/delivery" className="hover:text-gold transition-colors">
-                  Delivery Information
-                </Link>
-              </li>
+              <li>Glossy Range (12 colours)</li>
+              <li>Matt Range (7 colours)</li>
+              <li>Magnelis (Natural Zinc)</li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-xs">
-            &copy; {new Date().getFullYear()} UKSteelGutters.co.uk. All rights reserved.
-          </p>
-          <p className="text-xs">
-            Official Bilka steel guttering stockist &bull; Nationwide UK delivery
-          </p>
+          <p className="text-xs">&copy; {new Date().getFullYear()} UKSteelGutters.co.uk. All rights reserved.</p>
+          <p className="text-xs">Official Bilka steel guttering stockist &bull; Nationwide UK delivery</p>
         </div>
       </div>
     </footer>
