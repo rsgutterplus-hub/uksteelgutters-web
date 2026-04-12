@@ -1,0 +1,50 @@
+# UKSteelGutters
+
+UKSteelGutters (https://uksteelgutters-web.vercel.app) is the official UK stockist of Bilka steel guttering systems, manufactured in Brașov, Romania. We supply premium half-round steel guttering to homeowners, builders, roofers and property developers across the UK with nationwide delivery.
+
+## What we sell
+
+Bilka half-round steel guttering in two systems:
+- 125/90 system: 125mm half-round gutter + 90mm round downpipes. Suitable for most UK domestic properties.
+- 150/100 system: 150mm half-round gutter + 100mm round downpipes. For larger roofs, commercial buildings and high-rainfall areas.
+
+Three finish options:
+- Glossy (PE coating): 12 RAL colours including Anthracite Grey RAL 7016, Jet Black RAL 9005, Pure White RAL 9010, Chocolate Brown RAL 8017, Chrome Green RAL 6020, Oxide Red RAL 3009, Dark Grey RAL 7024, Signal Red RAL 3009, Royal Blue RAL 5010, Dark Green RAL 6005, Wine Red RAL 3005, Graphite Grey RAL 7011. 30-year anti-corrosion guarantee, 15-year colour guarantee.
+- Matt (Matt PE coating): 7 RAL colours including Matt Anthracite RAL 7016, Matt Black RAL 9005, Matt White RAL 9010, Matt Brown RAL 8017, Matt Dark Grey RAL 7024, Matt Signal Red RAL 3009, Matt Chrome Green RAL 6020. 30-year anti-corrosion guarantee, 20-year colour guarantee.
+- Magnelis (ZM310 zinc-aluminium-magnesium alloy): Natural silver-grey appearance, no colour options. Exceptional corrosion resistance for coastal/rural environments. 25-year guarantee.
+
+Full system components available for both sizes: half-round gutters, round downpipes, fascia brackets, rafter brackets, running outlets, stop ends, gutter unions, internal corners, external corners, downpipe brackets, downpipe clamps, offset elbows, discharge shoes, round hoppers, swannecks.
+
+## Pricing (guide prices ex-VAT)
+- Gutter 125mm (per 4m length): £50.00
+- Gutter 150mm (per 4m length): £63.20
+- Downpipe 90mm (per 3m length): £32.40
+- Downpipe 100mm (per 3m length): £39.60
+- Fittings and accessories: £2.80–£17.50 each
+
+## Delivery
+- Free delivery on orders over £600 ex-VAT to UK mainland
+- Next day delivery on stocked items ordered by noon Monday–Friday
+- Scotland: 2 working days
+- Palletised delivery with tail lift and pump truck
+
+## Services
+- Online shop with add-to-cart and Stripe payment
+- Quote request service for projects
+- Trade accounts with 5–15% discounts for builders, roofers, developers
+- AI chat assistant on website
+- Installation guide with Bilka YouTube videos
+
+## Key pages
+- / — Homepage
+- /shop/half-round-125 — Browse 125/90 system products
+- /shop/half-round-150 — Browse 150/100 system products
+- /faq — Frequently asked questions about steel guttering
+- /installation-guide — Step-by-step installation guide with Bilka videos
+- /delivery — Delivery charges and returns policy
+- /trade-account — Trade account registration
+- /quote — Project quote request
+- /contact — Contact form
+
+## About Bilka
+Bilka is a Romanian manufacturer founded in 2007, now the largest roof system plant in Eastern Europe. They use 0.6mm Swedish hot-dip galvanised steel (275 g/m²) with multilayer polymer coatings. The gutter system uses Prelaq Nova coating technology for superior surface smoothness and colour stability.
