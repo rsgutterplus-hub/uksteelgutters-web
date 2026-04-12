@@ -82,6 +82,18 @@ export default function HomePage() {
       {/* Hero */}
       <section className="bg-navy text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy-light to-navy opacity-90" />
+        {/* Gutter image — bottom right */}
+        <div className="absolute bottom-0 right-0 w-[300px] h-[325px] sm:w-[400px] sm:h-[433px] lg:w-[500px] lg:h-[542px] pointer-events-none">
+          <img
+            src="/images/hero-gutter.jpg"
+            alt="Bilka steel gutter and downpipe system"
+            className="w-full h-full object-contain object-right-bottom"
+          />
+          {/* Gradient overlay to blend image into navy on the left */}
+          <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/60 to-transparent" />
+          {/* Gradient overlay to blend image into navy on the top */}
+          <div className="absolute inset-0 bg-gradient-to-b from-navy via-transparent to-transparent" />
+        </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-36">
           <div className="max-w-3xl">
             <p className="text-gold text-sm font-semibold uppercase tracking-widest mb-4">Official UK Bilka Stockist</p>
