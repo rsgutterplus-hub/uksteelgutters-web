@@ -2,6 +2,17 @@
 
 UKSteelGutters (https://uksteelgutters-web.vercel.app) is the official UK stockist of Bilka steel guttering systems, manufactured in Brașov, Romania. We supply premium half-round steel guttering to homeowners, builders, roofers and property developers across the UK with nationwide delivery.
 
+## Steel specification
+
+All Bilka guttering is made from 0.6mm steel sourced from SSAB, one of the world's leading steel manufacturers headquartered in Sweden. SSAB steel is used because of its consistent quality, high strength and compatibility with demanding coating processes.
+
+Galvanisation:
+- Glossy and Matt finishes: Z275 hot-dip galvanisation — 275 g/m² of zinc applied to both sides of the steel strip. The zinc provides sacrificial corrosion protection and supports adhesion of the polymer colour coat.
+- Magnelis finish: ZM310 zinc-aluminium-magnesium alloy coating — a more advanced alternative to standard zinc, providing self-healing protection at cut edges. Superior in coastal, rural and highly polluted environments.
+
+Colour coating:
+- Prelaq Nova polyester coating system applied in two layers (2 × 35 microns) on top of the zinc galvanisation. Available in gloss or matt formulations. Provides UV resistance, flexibility and colour stability.
+
 ## What we sell
 
 Bilka half-round steel guttering in two systems:
@@ -9,11 +20,13 @@ Bilka half-round steel guttering in two systems:
 - 150/100 system: 150mm half-round gutter + 100mm round downpipes. For larger roofs, commercial buildings and high-rainfall areas.
 
 Three finish options:
-- Glossy (PE coating): 12 RAL colours including Anthracite Grey RAL 7016, Jet Black RAL 9005, Pure White RAL 9010, Chocolate Brown RAL 8017, Chrome Green RAL 6020, Oxide Red RAL 3009, Dark Grey RAL 7024, Signal Red RAL 3009, Royal Blue RAL 5010, Dark Green RAL 6005, Wine Red RAL 3005, Graphite Grey RAL 7011. 30-year anti-corrosion guarantee, 15-year colour guarantee.
-- Matt (Matt PE coating): 7 RAL colours including Matt Anthracite RAL 7016, Matt Black RAL 9005, Matt White RAL 9010, Matt Brown RAL 8017, Matt Dark Grey RAL 7024, Matt Signal Red RAL 3009, Matt Chrome Green RAL 6020. 30-year anti-corrosion guarantee, 20-year colour guarantee.
-- Magnelis (ZM310 zinc-aluminium-magnesium alloy): Natural silver-grey appearance, no colour options. Exceptional corrosion resistance for coastal/rural environments. 25-year guarantee.
+- Glossy (Z275 + Prelaq Nova PE): 12 RAL colours. 30-year anti-corrosion guarantee, 15-year colour guarantee.
+- Matt (Z275 + Prelaq Nova Matt PE): 7 RAL colours. 30-year anti-corrosion guarantee, 20-year colour guarantee.
+- Magnelis (ZM310 Zn+Al+Mg alloy): Natural silver-grey. Self-healing at cut edges. 25-year guarantee.
 
-Full system components available for both sizes: half-round gutters, round downpipes, fascia brackets, rafter brackets, running outlets, stop ends, gutter unions, internal corners, external corners, downpipe brackets, downpipe clamps, offset elbows, discharge shoes, round hoppers, swannecks.
+Available RAL colours (Glossy range): RAL 7016 Anthracite Grey, RAL 9005 Jet Black, RAL 9010 Pure White, RAL 8017 Chocolate Brown, RAL 6020 Chrome Green, RAL 3009 Oxide Red, RAL 7024 Dark Grey, RAL 9006 Light Silver, RAL 6005 Moss Green, RAL 3005 Wine Red, RAL 5010 Royal Blue, RAL 7011 Iron Grey.
+
+Full system components: half-round gutters, round downpipes, fascia brackets, rafter brackets, running outlets, stop ends, gutter unions, internal corners, external corners, downpipe brackets, downpipe clamps, offset elbows, discharge shoes, round hoppers, swannecks.
 
 ## Pricing (guide prices ex-VAT)
 - Gutter 125mm (per 4m length): £50.00
@@ -29,17 +42,18 @@ Full system components available for both sizes: half-round gutters, round downp
 - Palletised delivery with tail lift and pump truck
 
 ## Services
-- Online shop with add-to-cart and Stripe payment
+- Online shop with Stripe payment
 - Quote request service for projects
 - Trade accounts with 5–15% discounts for builders, roofers, developers
 - AI chat assistant on website
 - Installation guide with Bilka YouTube videos
+- Delivery and returns information
 
 ## Key pages
 - / — Homepage
 - /shop/half-round-125 — Browse 125/90 system products
 - /shop/half-round-150 — Browse 150/100 system products
-- /faq — Frequently asked questions about steel guttering
+- /faq — Frequently asked questions about steel guttering and specification
 - /installation-guide — Step-by-step installation guide with Bilka videos
 - /delivery — Delivery charges and returns policy
 - /trade-account — Trade account registration
@@ -47,4 +61,4 @@ Full system components available for both sizes: half-round gutters, round downp
 - /contact — Contact form
 
 ## About Bilka
-Bilka is a Romanian manufacturer founded in 2007, now the largest roof system plant in Eastern Europe. They use 0.6mm Swedish hot-dip galvanised steel (275 g/m²) with multilayer polymer coatings. The gutter system uses Prelaq Nova coating technology for superior surface smoothness and colour stability.
+Bilka is a Romanian manufacturer founded in 2007, now the largest roof system plant in Eastern Europe. They use 0.6mm SSAB Swedish hot-dip galvanised steel with multilayer Prelaq Nova polymer coatings. The gutter system is available in two sizes (125/90 and 150/100) across Glossy, Matt and Magnelis finishes.

@@ -2,10 +2,26 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Steel Guttering FAQs",
-  description: "Answers to frequently asked questions about Bilka steel guttering — sizing, installation, colours, delivery, warranties and trade pricing.",
+  description: "Answers to frequently asked questions about Bilka steel guttering — SSAB Swedish steel, Z275 zinc coating, Magnelis, sizing, installation, colours, delivery and trade pricing.",
 };
 
 const faqs = [
+  {
+    q: "What steel is used in Bilka guttering?",
+    a: "Bilka guttering is made from 0.6mm steel sourced from SSAB, one of the world's leading steel manufacturers headquartered in Sweden. SSAB steel is prized for its consistency, high strength and suitability for demanding coating processes. The steel is 0.6mm thick, which is thicker than many competitor products that use 0.5mm steel.",
+  },
+  {
+    q: "What is Z275 galvanisation?",
+    a: "Z275 refers to hot-dip galvanisation with 275 grams of zinc per square metre, applied to both sides of the steel strip. The zinc layer acts as the primary corrosion barrier. If the surface coating is ever scratched or damaged, the zinc beneath provides sacrificial protection, corroding preferentially to protect the steel underneath. Z275 is the galvanisation standard used on Bilka Glossy and Matt guttering.",
+  },
+  {
+    q: "What is Magnelis coating and why is it better than standard zinc?",
+    a: "Magnelis (ZM310) is an advanced zinc-aluminium-magnesium alloy coating developed as a superior alternative to standard hot-dip zinc galvanisation. Where standard Z275 zinc provides protection only where the coating is intact, Magnelis actively migrates to protect cut edges and any small areas of damage through a self-healing mechanism. The combination of zinc, aluminium and magnesium creates a denser, more chemically complex protective layer that outperforms standard zinc in corrosive environments. It is the preferred choice for coastal properties, rural locations and anywhere with high atmospheric pollution. It carries a 25-year anti-corrosion guarantee and has a natural silver-grey appearance that does not require a colour coat.",
+  },
+  {
+    q: "What is Prelaq Nova coating?",
+    a: "Prelaq Nova is the proprietary polymer coating system applied on top of the zinc galvanisation to give Bilka guttering its colour. It is applied in two layers totalling 2 x 35 microns. Prelaq Nova provides excellent UV resistance, flexibility to resist cracking during installation, and strong adhesion to the zinc substrate beneath. It is available in both gloss and matt formulations depending on the finish selected.",
+  },
   {
     q: "What size steel guttering do I need?",
     a: "For most domestic properties, the 125/90mm system (125mm gutter, 90mm downpipe) is sufficient. As a rough guide, each downpipe outlet handles approximately 50m² of roof area. The larger 150/100mm system suits properties with a bigger roof, a steep pitch, or located in a high-rainfall area. If you’re unsure, use our quote service and we’ll calculate the correct system for your project.",
@@ -23,10 +39,6 @@ const faqs = [
     a: "Steel guttering is significantly more durable. It won’t discolour, crack or become brittle over time, handles temperature extremes better, and adds genuine kerb appeal. The higher upfront cost is offset by a much longer lifespan — you’re unlikely to need to replace it again. For builders, developers or anyone wanting a long-term solution, steel is the better choice.",
   },
   {
-    q: "What is Magnelis coating?",
-    a: "Magnelis (ZM310) is a zinc-aluminium-magnesium alloy coating applied to Bilka steel guttering as an alternative to colour-painted finishes. It gives a natural silver-grey appearance similar to zinc, and provides outstanding corrosion resistance — particularly in coastal, rural or polluted environments. It carries a 25-year anti-corrosion guarantee.",
-  },
-  {
     q: "What RAL colours are available for Bilka steel guttering?",
     a: "The Glossy range offers 12 RAL colours including RAL 7016 Anthracite Grey, RAL 9005 Jet Black, RAL 9010 Pure White, RAL 8017 Chocolate Brown, RAL 6020 Chrome Green, RAL 3009 Oxide Red, RAL 7024 Dark Grey, RAL 9006 Light Silver, RAL 6005 Moss Green, RAL 3005 Wine Red, RAL 5010 Royal Blue and RAL 7011 Iron Grey. The Matt range offers 7 of these in a low-sheen finish. Magnelis is available in one natural zinc colour.",
   },
@@ -40,7 +52,7 @@ const faqs = [
   },
   {
     q: "How do I cut Bilka steel guttering?",
-    a: "Use a hacksaw or manual tin snips. Do not use an angle grinder, circular saw or flex grinder — these generate heat and sparks that damage the protective coating and lead to rust. After cutting, always clean away any metal swarf from inside the gutter, as even small metal filings can cause rust staining.",
+    a: "Use a hacksaw or manual tin snips. Do not use an angle grinder, circular saw or flex grinder — these generate heat and sparks that damage the protective Prelaq Nova coating and Z275 zinc layer, leading to rust. After cutting, always clean away any metal swarf from inside the gutter, as even small metal filings will rust and cause staining.",
   },
   {
     q: "What is the free delivery threshold?",
@@ -53,10 +65,6 @@ const faqs = [
   {
     q: "What warranty comes with Bilka steel guttering?",
     a: "Bilka Glossy guttering carries a 30-year anti-corrosion guarantee and 15-year colour guarantee. Matt finishes carry a 30-year anti-corrosion guarantee and 20-year colour guarantee. Magnelis carries a 25-year corrosion and colour guarantee. These guarantees apply to correctly installed guttering under normal conditions.",
-  },
-  {
-    q: "How do I get a quote for my project?",
-    a: "Use our online quote request service. Browse our products, add items to your quote basket selecting the colour, finish and quantity you need, then submit your contact details. We’ll review your requirements and get back to you with pricing within one working day.",
   },
   {
     q: "What gutter fall (slope) is required for steel guttering?",
@@ -82,7 +90,7 @@ export default function FaqPage() {
       <section className="bg-navy text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold">Frequently Asked <span className="text-gold">Questions</span></h1>
-          <p className="mt-2 text-gray-400">Everything you need to know about Bilka steel guttering.</p>
+          <p className="mt-2 text-gray-400">Everything you need to know about Bilka steel guttering — from the steel itself to installation and delivery.</p>
         </div>
       </section>
 

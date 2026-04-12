@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Steel Guttering UK — Official Bilka Stockist",
   description:
-    "Buy Bilka half round steel guttering online. 125/90 and 150/100 systems in 12 RAL colours. Glossy, Matt and Magnelis finishes. 30-year anti-corrosion guarantee. Free UK delivery over £600. Next day available.",
+    "Buy Bilka half round steel guttering online. Made from SSAB Swedish steel with Z275 hot-dip galvanisation. 125/90 and 150/100 systems in 12 RAL colours. 30-year guarantee. Free UK delivery over £600.",
 };
 
 export default function HomePage() {
@@ -22,7 +22,7 @@ export default function HomePage() {
               <span className="text-gold">Guttering Systems</span>
             </h1>
             <p className="mt-6 text-lg text-gray-300 leading-relaxed max-w-2xl">
-              Bilka half round steel gutters built to last. 30-year anti-corrosion guarantee, Scandinavian engineering, and a wide range of RAL colours to complement any property.
+              Bilka half round steel gutters built on SSAB Swedish steel with Z275 hot-dip galvanisation. 30-year anti-corrosion guarantee, a wide range of RAL colours, and nationwide delivery.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <Link href="/shop/half-round-125" className="inline-flex items-center justify-center px-8 py-3.5 bg-gold text-navy font-bold rounded-lg hover:bg-gold-light transition-colors">Shop 125/90 System</Link>
@@ -37,11 +37,11 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl font-bold text-navy">Why Choose Bilka Steel Gutters?</h2>
-            <p className="mt-3 text-gray-500 max-w-2xl mx-auto">European-manufactured steel rainwater systems trusted across the UK</p>
+            <p className="mt-3 text-gray-500 max-w-2xl mx-auto">European-manufactured steel rainwater systems built on world-class Swedish steel</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: "30-Year Guarantee", desc: "30-year anti-corrosion guarantee on Glossy and Matt finishes. Bilka 0.6mm Swedish steel with multilayer coatings far outlasts plastic alternatives.", icon: "🛡️" },
+              { title: "30-Year Guarantee", desc: "30-year anti-corrosion guarantee on Glossy and Matt finishes. Bilka 0.6mm SSAB Swedish steel with multilayer coatings far outlasts plastic alternatives.", icon: "🛡️" },
               { title: "Three Finish Ranges", desc: "Choose from Glossy PE, Matt PE, or Magnelis ZM310 finishes. 12 Glossy colours, 7 Matt colours, and natural Magnelis available.", icon: "🎨" },
               { title: "Two System Sizes", desc: "125/90mm for standard residential or 150/100mm for larger properties and high-rainfall areas. Complete system components in all colours.", icon: "📐" },
             ].map((item) => (
@@ -55,8 +55,89 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Systems */}
+      {/* The Steel — SSAB */}
+      <section className="py-20 bg-navy text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <p className="text-gold text-sm font-semibold uppercase tracking-widest mb-3">The Steel</p>
+              <h2 className="text-3xl font-bold mb-6">Built on SSAB Swedish Steel</h2>
+              <p className="text-gray-300 leading-relaxed mb-6">
+                Every Bilka gutter system starts with 0.6mm steel from SSAB — one of the world&apos;s leading steel manufacturers, headquartered in Sweden. SSAB steel is renowned for its consistency, strength and suitability for demanding coating processes.
+              </p>
+              <p className="text-gray-300 leading-relaxed">
+                The steel receives a Z275 hot-dip galvanisation — 275 grams of zinc per square metre applied to both sides — before the polymer colour coating is applied on top. This dual-layer protection is what gives Bilka guttering its exceptional longevity.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+                { label: "Steel thickness", value: "0.6mm", detail: "SSAB Swedish steel" },
+                { label: "Zinc galvanisation", value: "Z275", detail: "275 g/m² both sides" },
+                { label: "Colour coating", value: "Prelaq Nova", detail: "2 × 35 micron polymer" },
+                { label: "Magnelis option", value: "ZM310", detail: "Zn + Al + Mg alloy" },
+              ].map(s => (
+                <div key={s.label} className="bg-white/5 rounded-xl p-5 border border-white/10">
+                  <p className="text-xs text-gray-400 mb-1">{s.label}</p>
+                  <p className="text-xl font-bold text-gold">{s.value}</p>
+                  <p className="text-xs text-gray-400 mt-1">{s.detail}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Magnelis explained */}
       <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div>
+              <p className="text-gold text-sm font-semibold uppercase tracking-widest mb-3">Advanced Coating</p>
+              <h2 className="text-3xl font-bold text-navy mb-6">What is Magnelis ZM310?</h2>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Magnelis is an advanced zinc-aluminium-magnesium alloy coating (ZM310) developed as a step up from standard hot-dip galvanisation. Where standard Z275 zinc coating relies on zinc alone, Magnelis combines zinc with aluminium and magnesium to create a more complex protective layer.
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                The key advantage is <strong className="text-navy">self-healing at cut edges</strong>. When steel is cut during installation, standard zinc-coated steel leaves the cut edge exposed. Magnelis actively migrates to protect those edges, dramatically reducing the risk of rust initiation at cut points.
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                It is the preferred choice for coastal properties, rural environments and anywhere with high atmospheric corrosion. It carries a 25-year anti-corrosion guarantee and requires no colour coat — its natural silver-grey appearance weathers consistently over time.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <div className="bg-cream rounded-xl p-6">
+                <h3 className="font-bold text-navy mb-4 text-sm uppercase tracking-wider">Magnelis vs Standard Zinc</h3>
+                <div className="space-y-3">
+                  {[
+                    ["Coating type", "ZM310 Zn+Al+Mg alloy", "Z275 pure zinc"],
+                    ["Cut edge protection", "Self-healing", "None"],
+                    ["Best for", "Coastal / rural", "Standard environments"],
+                    ["Appearance", "Natural silver-grey", "Colour-coated"],
+                    ["Guarantee", "25 years", "30 years"],
+                  ].map(([label, mag, zinc]) => (
+                    <div key={label} className="grid grid-cols-3 text-xs gap-2">
+                      <span className="text-gray-500 font-medium">{label}</span>
+                      <span className="text-navy font-semibold">{mag}</span>
+                      <span className="text-gray-500">{zinc}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="grid grid-cols-3 text-xs gap-2 mt-2 pt-2 border-t border-gray-200">
+                  <span />
+                  <span className="text-gold font-semibold">Magnelis</span>
+                  <span className="text-gray-400">Standard zinc</span>
+                </div>
+              </div>
+              <Link href="/faq#magnelis" className="block bg-navy/5 rounded-xl p-4 text-sm text-navy font-medium hover:bg-navy/10 transition-colors">
+                Read more in our FAQ →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Systems */}
+      <section className="py-20 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl font-bold text-navy">Our Gutter Systems</h2>
@@ -91,7 +172,7 @@ export default function HomePage() {
       </section>
 
       {/* Finishes */}
-      <section className="py-20 bg-cream">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl font-bold text-navy">Available Finishes</h2>
@@ -99,9 +180,9 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { name: "Glossy Range", coating: "Polyester (PE) coating", desc: "High-gloss finish with excellent UV resistance. 12 RAL colours including Anthracite Grey, Jet Black and Pure White. 30-year anti-corrosion, 15-year colour guarantee.", colours: "12" },
-              { name: "Matt Range", coating: "Matt Polyester (MATT PE) coating", desc: "Elegant low-sheen finish that reduces glare and complements modern architecture. 7 RAL colours. 30-year anti-corrosion, 20-year colour guarantee.", colours: "7" },
-              { name: "Magnelis Range", coating: "Magnelis ZM310 coating", desc: "Zinc-aluminium-magnesium alloy. Natural silver-grey appearance. Outstanding corrosion resistance for coastal and rural environments. 25-year guarantee.", colours: "1" },
+              { name: "Glossy Range", coating: "Z275 + Prelaq Nova PE", desc: "SSAB steel with Z275 zinc galvanisation and high-gloss Prelaq Nova polyester coating. 12 RAL colours. 30-year anti-corrosion, 15-year colour guarantee.", colours: "12" },
+              { name: "Matt Range", coating: "Z275 + Prelaq Nova Matt PE", desc: "SSAB steel with Z275 zinc galvanisation and low-sheen Prelaq Nova matt polyester coating. 7 RAL colours. 30-year anti-corrosion, 20-year colour guarantee.", colours: "7" },
+              { name: "Magnelis Range", coating: "ZM310 Zn+Al+Mg alloy", desc: "SSAB steel with advanced ZM310 zinc-aluminium-magnesium alloy coating. Self-healing at cut edges. Outstanding corrosion resistance. 25-year guarantee.", colours: "1" },
             ].map((finish) => (
               <div key={finish.name} className="bg-white rounded-xl p-8 border border-gray-100 text-center">
                 <h3 className="text-xl font-bold text-navy">{finish.name}</h3>
