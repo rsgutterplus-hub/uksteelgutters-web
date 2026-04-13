@@ -84,6 +84,34 @@ const specs = [
   ["Minimum install temperature", "−15°C (machine bend) / +5°C (manual bend)"],
 ];
 
+const whiteRustStorage = [
+  {
+    icon: "🏠",
+    title: "Store under cover immediately",
+    body: "Bring packs indoors or under a roof as soon as they are delivered. Avoid leaving bundles exposed to rain, dew or morning condensation even overnight.",
+  },
+  {
+    icon: "🌬️",
+    title: "Ensure free airflow around all surfaces",
+    body: "Never wrap packs in non-breathable plastic sheeting — trapped moisture with no air circulation is the primary cause of white rust. If outdoor storage is unavoidable, cover with a tarpaulin raised on a simple scaffold frame so air can circulate beneath and around the stack.",
+  },
+  {
+    icon: "📦",
+    title: "Keep off the ground",
+    body: "Always stack on wooden or metal skids to prevent direct contact with damp ground, grass or wet concrete. Ground contact is one of the fastest routes to white rust.",
+  },
+  {
+    icon: "🌡️",
+    title: "Avoid rapid temperature changes",
+    body: "Moving cold steel into a warm building — or vice versa — can cause condensation to form on every surface, including between tightly stacked sections. Allow temperature equalisation gradually where possible.",
+  },
+  {
+    icon: "📅",
+    title: "Install within 45 days of delivery",
+    body: "Bilka's warranty conditions require installation within 45 days of delivery. Storing steel guttering longer than this is considered a breach of warranty. Plan your delivery date to match your installation window.",
+  },
+];
+
 export default function InstallationGuidePage() {
   return (
     <>
@@ -178,6 +206,62 @@ export default function InstallationGuidePage() {
               ))}
             </div>
           </div>
+
+          {/* White rust article */}
+          <article className="border-t border-gray-100 pt-12">
+            <h2 className="text-2xl font-bold text-navy mb-2">
+              White Rust on Steel Guttering — What It Is and How to Prevent It
+            </h2>
+            <p className="text-sm text-gray-500 mb-6">Storage &amp; handling guide</p>
+
+            <div className="prose prose-sm max-w-none text-gray-600 space-y-4 leading-relaxed">
+              <p>
+                Steel guttering is designed to last for decades once installed. But between delivery and installation, there is a window where incorrect storage can cause a surface condition called white rust — and it is worth understanding before your order arrives.
+              </p>
+
+              <h3 className="text-lg font-bold text-navy mt-8 mb-3">What is white rust?</h3>
+              <p>
+                White rust is the common name for zinc hydroxide, a chalky white or grey powdery deposit that can form on the surface of galvanised steel. It appears when the zinc coating reacts with moisture in conditions where there is insufficient airflow. Under normal atmospheric conditions, zinc reacts with oxygen and carbon dioxide to form a stable, hard zinc carbonate layer — the protective patina that gives galvanised steel its long-term corrosion resistance. But when steel sections are tightly bundled or stacked and exposed to moisture without adequate air circulation, this process is disrupted. Zinc hydroxide forms instead, and because it is voluminous it can look alarming even when the underlying zinc coating is largely intact.
+              </p>
+              <p>
+                It can form surprisingly quickly — in conditions of high humidity and poor ventilation, white rust can appear within 24 to 48 hours on freshly galvanised surfaces.
+              </p>
+
+              <h3 className="text-lg font-bold text-navy mt-8 mb-3">How serious is it?</h3>
+              <p>
+                In most cases, light white rust is superficial. Because zinc hydroxide is far more voluminous than the zinc it forms from, even a heavy-looking deposit often represents only a small loss of coating thickness. Once material is separated, dried and exposed to free-flowing air, the zinc hydroxide gradually converts to zinc carbonate and the protective patina re-establishes itself. If left untreated in persistently damp conditions, however, white rust can progress first to black rust and eventually to red-brown iron rust as the zinc coating is consumed — at which point structural integrity may be affected.
+              </p>
+              <p>
+                This is also why the Bilka warranty requires installation within 45 days of delivery. Prolonged storage in suboptimal conditions is one of the primary causes of coating degradation before a product even reaches a roof.
+              </p>
+
+              <h3 className="text-lg font-bold text-navy mt-8 mb-3">How to treat existing white rust</h3>
+              <p>
+                Light surface staining can often be left alone — once installed and exposed to normal weathering, the zinc hydroxide will gradually convert. For heavier deposits, brush the affected area with a stiff-bristled nylon brush (not wire, which will damage the coating). If brushing alone is insufficient, apply ordinary white vinegar with the brush — its mild acidity dissolves zinc hydroxide without damaging the underlying zinc. Rinse thoroughly with clean water immediately after and allow to dry completely. A coating thickness check after cleaning will confirm whether sufficient zinc remains.
+              </p>
+
+              <h3 className="text-lg font-bold text-navy mt-8 mb-3">How to store steel guttering correctly</h3>
+            </div>
+
+            <div className="mt-6 space-y-4">
+              {whiteRustStorage.map((item) => (
+                <div key={item.title} className="flex gap-4 bg-cream rounded-xl p-5">
+                  <span className="text-2xl flex-shrink-0">{item.icon}</span>
+                  <div>
+                    <p className="font-semibold text-navy text-sm mb-1">{item.title}</p>
+                    <p className="text-sm text-gray-600 leading-relaxed">{item.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-6 bg-amber-50 border border-amber-200 rounded-xl p-5 text-sm text-amber-900">
+              <p className="font-semibold mb-1">⚠ Warranty note</p>
+              <p>
+                Storing Bilka products for more than 45 days, or in direct contact with wet concrete, copper, soil or other corrosive materials, is listed as a warranty exclusion in the Bilka product terms. If you need to delay installation, ensure conditions meet the storage guidelines above and contact us if you have any concerns.
+              </p>
+            </div>
+          </article>
 
           {/* Bilka docs link */}
           <div className="bg-cream rounded-xl p-6 text-sm text-gray-700">
