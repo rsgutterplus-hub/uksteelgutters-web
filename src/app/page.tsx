@@ -85,7 +85,7 @@ export default function HomePage() {
         {/* Gutter image — bottom right */}
         <div className="absolute bottom-0 right-0 w-[300px] h-[325px] sm:w-[400px] sm:h-[433px] lg:w-[500px] lg:h-[542px] pointer-events-none">
           <img
-            src="/images/hero-gutter.jpg"
+            src="/images/unnamed%20(4).jpg"
             alt="Bilka steel gutter and downpipe system"
             className="w-full h-full object-contain object-right-bottom"
           />
