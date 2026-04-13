@@ -119,7 +119,27 @@ export default function DeliveryPage() {
                   <li className="flex gap-2"><span className="text-red-400 flex-shrink-0">✗</span>Goods that have been cut, modified or installed</li>
                   <li className="flex gap-2"><span className="text-red-400 flex-shrink-0">✗</span>Special or non-standard colour orders made to order</li>
                   <li className="flex gap-2"><span className="text-red-400 flex-shrink-0">✗</span>Items returned without prior authorisation</li>
+                  <li className="flex gap-2"><span className="text-red-400 flex-shrink-0">✗</span>Goods showing white rust, surface corrosion or any coating damage caused by incorrect storage</li>
+                  <li className="flex gap-2"><span className="text-red-400 flex-shrink-0">✗</span>Goods that have been in contact with wet concrete, copper, soil or other corrosive materials</li>
+                  <li className="flex gap-2"><span className="text-red-400 flex-shrink-0">✗</span>Goods stored for more than 45 days after delivery</li>
                 </ul>
+              </div>
+
+              {/* White rust callout */}
+              <div className="bg-amber-50 border border-amber-200 rounded-xl p-5">
+                <h3 className="font-semibold text-navy mb-2">⚠ Storage damage &amp; white rust</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Bilka steel guttering has a galvanised zinc coating that requires correct storage to remain in warranted condition. If products are stored in damp, poorly ventilated conditions — or stacked tightly without airflow — a white powdery deposit called white rust (zinc hydroxide) can form on the surface. This is a storage condition, not a manufacturing defect.
+                </p>
+                <p className="mt-3 text-gray-700 leading-relaxed">
+                  We are unable to accept returns of goods where white rust, coating discolouration or physical damage has occurred after delivery as a result of incorrect storage or handling. This includes goods that have been left exposed to rain, stored directly on wet ground, wrapped in non-breathable plastic, or kept beyond the 45-day installation window specified in the Bilka warranty.
+                </p>
+                <p className="mt-3 text-gray-700 leading-relaxed">
+                  To protect your order, please store all steel guttering products indoors or under cover immediately on delivery, raised off the ground on skids, with adequate airflow around all surfaces. Full guidance on correct storage is available on our{" "}
+                  <Link href="/installation-guide" className="text-navy font-semibold underline underline-offset-2 hover:text-gold transition-colors">
+                    Installation Guide
+                  </Link>.
+                </p>
               </div>
 
               <div className="bg-white rounded-xl border border-gray-100 p-5">
