@@ -89,6 +89,10 @@ export default function HomePage() {
             alt="Bilka steel gutter and downpipe system"
             className="w-full h-full object-contain object-right-bottom"
           />
+          {/* Gradient overlay to blend image into navy on the left */}
+          <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/60 to-transparent" />
+          {/* Gradient overlay to blend image into navy on the top */}
+          <div className="absolute inset-0 bg-gradient-to-b from-navy via-transparent to-transparent" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-36">
           <div className="max-w-3xl">
