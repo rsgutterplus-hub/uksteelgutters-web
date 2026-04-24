@@ -15,11 +15,17 @@ export async function generateMetadata(
   const { slug } = await params;
   const product = getProductBySlug(slug, "150/100");
   if (!product) return {};
+
+  const description = `${product.description}${
+    product.price ? ` ${product.price}.` : ""
+  } Available in Glossy, Matt and Magnelis finishes. Free UK delivery over £600.`;
+
   return {
-    title: `${product.name} | 150/100 System | UKSteelGutters`,
-    description: `${product.description} Available in Glossy, Matt and Magnelis finishes.${
-      product.price ? " " + product.price + "." : ""
-    } Free UK delivery over £600.`,
+    title: `${product.name} | 150/100 System`,
+    description,
+    alternates: {
+      canonical: `${BASE_URL}/shop/half-round-150/${product.slug}`,
+    },
     openGraph: {
       title: `${product.name} | UKSteelGutters`,
       description: product.description,

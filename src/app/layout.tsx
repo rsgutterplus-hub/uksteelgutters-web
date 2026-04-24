@@ -6,7 +6,7 @@ import { QuoteProvider } from "@/context/QuoteContext";
 import ChatBot from "@/components/ChatBot";
 import "./globals.css";
 
-const BASE = process.env.NEXT_PUBLIC_BASE_URL || "https://uksteelgutters-web.vercel.app";
+const BASE = process.env.NEXT_PUBLIC_BASE_URL || "https://uksteelgutters.co.uk";
 
 const orgSchema = {
   "@context": "https://schema.org",
@@ -20,7 +20,7 @@ const orgSchema = {
   offers: {
     "@type": "AggregateOffer",
     priceCurrency: "GBP",
-    offerCount: "32",
+    offerCount: "36",
     description: "Bilka steel guttering systems in 125/90 and 150/100",
   },
 };
@@ -49,11 +49,9 @@ export const metadata: Metadata = {
   },
   description:
     "Official UK stockist of Bilka steel guttering. Half round steel gutters in 125/90 and 150/100 systems. 30-year guarantee. 12 RAL colours. Free delivery over £600. Next day available.",
-  keywords: [
-    "steel guttering", "Bilka guttering", "half round steel gutters", "metal guttering UK",
-    "steel downpipes", "anthracite steel guttering", "125mm guttering", "150mm guttering",
-    "Magnelis guttering", "galvanised steel gutters", "steel rainwater system",
-  ],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     siteName: "UKSteelGutters",
