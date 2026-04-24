@@ -10,7 +10,7 @@ export default function Footer() {
               <div className="w-8 h-8 bg-gold rounded-sm flex items-center justify-center font-bold text-navy text-sm">UK</div>
               <span className="text-white font-bold">UK<span className="text-gold">Steel</span>Gutters</span>
             </div>
-            <p className="text-sm leading-relaxed">Official UK stockist of Bilka steel guttering systems. Premium quality steel rainwater goods with 30-year guarantee. Nationwide delivery.</p>
+            <p className="text-sm leading-relaxed">Official UK stockist of Bilka steel guttering systems. Premium quality steel rainwater goods with up to 20-year guarantee. Nationwide delivery.</p>
           </div>
 
           <div>
@@ -36,9 +36,9 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Finishes</h3>
             <ul className="space-y-2 text-sm">
-              <li>Glossy Range — 12 RAL colours</li>
-              <li>Matt Range — 7 RAL colours</li>
-              <li>Magnelis — Natural Zinc</li>
+              <li>Glossy Range — 10 RAL colours</li>
+              <li>Matt Range — 5 RAL colours</li>
+              <li>Magnelis ZM310 — Zn+Mg+Al+Si alloy</li>
             </ul>
           </div>
         </div>

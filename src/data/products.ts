@@ -14,32 +14,32 @@ export interface Product {
   category: string;
 }
 
+// Colour options confirmed by Bilka export manager Mihai Sandu:
+// Glossy: 10 colours (6005 Moss Green and 5010 Blue removed — not available for gutters)
+// Matt: 5 colours only — 9005, 8019, 8017, 7024, 7016
+// Magnelis: ZM310 zinc-magnesium-aluminium-silicon alloy
 export const colorOptions: Record<string, { name: string; hex: string }[]> = {
   Glossy: [
     { name: "RAL 9010 White", hex: "#f5f5f0" },
+    { name: "RAL 9006 White Aluminium", hex: "#a5a5a5" },
+    { name: "RAL 9005 Black", hex: "#0a0a0a" },
     { name: "RAL 8017 Brown", hex: "#45322e" },
     { name: "RAL 7024 Graphite", hex: "#474a51" },
     { name: "RAL 7016 Anthracite", hex: "#383e42" },
     { name: "RAL 7011 Iron Grey", hex: "#52595e" },
     { name: "RAL 6020 Green", hex: "#2e3a23" },
     { name: "RAL 3009 Oxide Red", hex: "#6d3329" },
-    { name: "RAL 9005 Black", hex: "#0a0a0a" },
-    { name: "RAL 9006 White Aluminium", hex: "#a5a5a5" },
-    { name: "RAL 6005 Moss Green", hex: "#2f4538" },
     { name: "RAL 3005 Wine Red", hex: "#5e2129" },
-    { name: "RAL 5010 Blue", hex: "#0e4c92" },
   ],
   Matt: [
     { name: "MAT RAL 9005 Black", hex: "#0a0a0a" },
-    { name: "MAT RAL 7016 Anthracite", hex: "#383e42" },
-    { name: "MAT RAL 7024 Graphite", hex: "#474a51" },
+    { name: "MAT RAL 8019 Grey Brown", hex: "#403a37" },
     { name: "MAT RAL 8017 Brown", hex: "#45322e" },
-    { name: "MAT RAL 9010 White", hex: "#f5f5f0" },
-    { name: "MAT RAL 3009 Oxide Red", hex: "#6d3329" },
-    { name: "MAT RAL 6020 Green", hex: "#2e3a23" },
+    { name: "MAT RAL 7024 Graphite", hex: "#474a51" },
+    { name: "MAT RAL 7016 Anthracite", hex: "#383e42" },
   ],
   Magnelis: [
-    { name: "Magnelis (Natural Zinc)", hex: "#b0b0a8" },
+    { name: "Magnelis ZM310", hex: "#b0b0a8" },
   ],
 };
 
@@ -51,7 +51,7 @@ const halfRound125Products: Product[] = [
     system: "125/90",
     range: "Glossy",
     description: "Bilka 125mm half round steel gutter. Premium quality steel guttering suitable for most residential properties. Available in Glossy, Matt and Magnelis finishes.",
-    features: ["125mm width", "0.6mm Bilka steel", "Half round profile", "Available in 2m & 4m lengths", "All RAL colours available"],
+    features: ["125mm width", "0.6mm Bilka steel", "Half round profile", "Available in 2m, 3m & 4m lengths", "10 Glossy & 5 Matt RAL colours"],
     image: "/images/products/gutter-7011-glossy.jpg",
     drawing: "/technical-drawings/gutter-125.pdf",
     price: "From £12.50/m",
@@ -66,7 +66,7 @@ const halfRound125Products: Product[] = [
     system: "125/90",
     range: "Glossy",
     description: "Bilka 90mm round downpipe for the 125mm half round gutter system. Precision-formed steel for reliable rainwater drainage.",
-    features: ["90mm diameter", "0.6mm Bilka steel", "Round profile", "Available in 2m & 3m lengths", "Colour matched to gutters"],
+    features: ["90mm diameter", "0.6mm Bilka steel", "Round profile", "Available in 1m & 3m lengths", "Colour matched to gutters"],
     image: "/images/products/downpipe-7016-glossy.jpg",
     drawing: "/technical-drawings/downpipe-90.pdf",
     price: "From £10.80/m",
@@ -324,7 +324,7 @@ const halfRound150Products: Product[] = [
     system: "150/100",
     range: "Glossy",
     description: "Bilka 150mm half round steel gutter. Large capacity guttering ideal for larger properties and higher rainfall areas.",
-    features: ["150mm width", "0.6mm Bilka steel", "Half round profile", "Available in 2m & 4m lengths", "High capacity"],
+    features: ["150mm width", "0.6mm Bilka steel", "Half round profile", "Available in 2m, 3m & 4m lengths", "10 Glossy & 5 Matt RAL colours"],
     image: "/images/products/gutter-7011-glossy.jpg",
     drawing: "/technical-drawings/gutter-150.pdf",
     price: "From £15.80/m",
@@ -339,7 +339,7 @@ const halfRound150Products: Product[] = [
     system: "150/100",
     range: "Glossy",
     description: "Bilka 100mm round downpipe for the 150mm half round gutter system. Larger bore for increased water flow.",
-    features: ["100mm diameter", "0.6mm Bilka steel", "Round profile", "Available in 2m & 3m lengths", "High flow capacity"],
+    features: ["100mm diameter", "0.6mm Bilka steel", "Round profile", "Available in 1m & 3m lengths", "High flow capacity"],
     image: "/images/products/downpipe-7016-glossy.jpg",
     drawing: "/technical-drawings/downpipe-100.pdf",
     price: "From £13.20/m",
