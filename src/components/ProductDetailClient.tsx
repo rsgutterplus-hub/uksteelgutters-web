@@ -7,7 +7,7 @@ import { useCart } from "@/context/CartContext";
 import { useQuote } from "@/context/QuoteContext";
 
 // Products that only have a single image — no per-colour variants yet
-const NO_COLOUR_VARIANTS = new Set(["gutter"]);
+const NO_COLOUR_VARIANTS = new Set(["gutter", "branch-pipe"]);
 
 export function getColourImage(baseImage: string, ralCode: string, finish: string): string {
   const filename = baseImage.split("/").pop() || "";
