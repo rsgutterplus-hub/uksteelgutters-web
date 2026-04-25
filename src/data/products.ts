@@ -217,7 +217,7 @@ const halfRound125Products: Product[] = [
     range: "Glossy",
     description: "Y-shaped branch pipe for the 90mm downpipe system. Allows two downpipe runs to merge into a single pipe, or diverts flow from a secondary source into the main downpipe. Ideal for complex roof layouts where multiple drainage points feed one downpipe.",
     features: ["For 90mm downpipes", "Y-branch configuration", "Merges two runs into one", "Steel construction", "Colour matched"],
-    image: "/images/products/branch-pipe-7016-glossy.jpg",
+    image: "/images/products/extension-7016-glossy.jpg", // Temporary placeholder — replace with branch-pipe photo from Bilka
     price: "From £9.80",
     unitPrice: 9.80,
     unit: "each",
@@ -489,7 +489,7 @@ const halfRound150Products: Product[] = [
     range: "Glossy",
     description: "Y-shaped branch pipe for the 100mm downpipe system. Allows two downpipe runs to merge into a single pipe, or diverts flow from a secondary source into the main downpipe. Ideal for complex roof layouts where multiple drainage points feed one downpipe.",
     features: ["For 100mm downpipes", "Y-branch configuration", "Merges two runs into one", "Steel construction", "Colour matched"],
-    image: "/images/products/branch-pipe-7016-glossy.jpg",
+    image: "/images/products/extension-7016-glossy.jpg", // Temporary placeholder — replace with branch-pipe photo from Bilka
     price: "From £11.50",
     unitPrice: 11.50,
     unit: "each",
